@@ -32,6 +32,7 @@ export const Header = () => {
             <Link to="/" className="text-sm font-medium text-gray-700 hover:text-red-600 transition-colors">Home</Link>
             <Link to="/recalls" className="text-sm font-medium text-gray-700 hover:text-red-600 transition-colors">All Recalls</Link>
             <Link to="/guides" className="text-sm font-medium text-gray-700 hover:text-red-600 transition-colors">Guides</Link>
+            <Link to="/tools" className="text-sm font-medium text-gray-700 hover:text-red-600 transition-colors">Tools</Link>
             <Link to="/about" className="text-sm font-medium text-gray-700 hover:text-red-600 transition-colors">About</Link>
             <Link to="/search" className="text-gray-500 hover:text-red-600 transition-colors">
               <Search size={18} />
@@ -78,6 +79,7 @@ export const Header = () => {
             <Link to="/" onClick={() => setMobileMenuOpen(false)} className="block text-sm font-medium text-gray-700 py-2">Home</Link>
             <Link to="/recalls" onClick={() => setMobileMenuOpen(false)} className="block text-sm font-medium text-gray-700 py-2">All Recalls</Link>
             <Link to="/guides" onClick={() => setMobileMenuOpen(false)} className="block text-sm font-medium text-gray-700 py-2">Guides</Link>
+            <Link to="/tools" onClick={() => setMobileMenuOpen(false)} className="block text-sm font-medium text-gray-700 py-2">Tools</Link>
             <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="block text-sm font-medium text-gray-700 py-2">About</Link>
             <Link to="/search" onClick={() => setMobileMenuOpen(false)} className="block text-sm font-medium text-gray-700 py-2">Search</Link>
             <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-sm font-medium text-gray-700 py-2">Contact</Link>

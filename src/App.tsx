@@ -26,6 +26,8 @@ const Archive = lazy(() => import("./pages/Archive"));
 const Newsletter = lazy(() => import("./pages/Newsletter"));
 const RecallsToday = lazy(() => import("./pages/RecallsToday"));
 const RecallsThisWeek = lazy(() => import("./pages/RecallsThisWeek"));
+const ToolsIndex = lazy(() => import("./pages/ToolsIndex"));
+const ToolPage = lazy(() => import("./pages/ToolPage"));
 const Auth = lazy(() => import("./pages/Auth"));
 const AcceptInvitation = lazy(() => import("./pages/AcceptInvitation"));
 
@@ -83,6 +85,8 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
+              <Route path="/tools" element={<ToolsIndex />} />
+              <Route path="/tools/:slug" element={<ToolPage />} />
               <Route path="/auth" element={<Auth />} />
               <Route path="/accept-invite" element={<AcceptInvitation />} />
               
