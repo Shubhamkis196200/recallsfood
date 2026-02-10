@@ -1,0 +1,25 @@
+project_id = "qjzhkgqvfmbdccxpwxtz"
+
+[functions.publish-scheduled-posts]
+verify_jwt = false
+
+[functions.cms-api]
+verify_jwt = false
+
+[functions.admin-users]
+verify_jwt = false
+
+[functions.send-email]
+verify_jwt = false
+
+[functions.sitemap]
+verify_jwt = false
+
+[functions.ai-generate-blog]
+verify_jwt = true
+
+[functions.list-bedrock-models]
+verify_jwt = true
+
+[functions.ai-generate-image]
+verify_jwt = true
