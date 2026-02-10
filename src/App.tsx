@@ -7,6 +7,8 @@ import { AuthProvider } from "@/contexts/AuthContext";
 import { lazy, Suspense } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import { ErrorBoundary } from "./components/ErrorBoundary";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 // Code-split: public pages loaded on demand
 const CategoryPage = lazy(() => import("./pages/CategoryPage"));
@@ -65,8 +67,10 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <Suspense fallback={<Loading />}>
-            <Routes>
+          <ErrorBoundary>
+            <ScrollToTop />
+            <Suspense fallback={<Loading />}>
+              <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/recalls" element={<RecallsList />} />
               <Route path="/recalls/today" element={<RecallsToday />} />
@@ -111,6 +115,7 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
+        </ErrorBoundary>
         </BrowserRouter>
       </TooltipProvider>
     </AuthProvider>

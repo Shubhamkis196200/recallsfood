@@ -5,6 +5,7 @@ import { getToolBySlug, getToolById, tools } from "@/data/tools";
 import SEO from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { lazy, Suspense } from "react";
+import { Printer } from "lucide-react";
 
 // Lazy load all tool components
 const toolComponents: Record<string, React.LazyExoticComponent<React.ComponentType>> = {
@@ -99,18 +100,28 @@ const ToolPage = () => {
 
         <div className="container mx-auto px-4 pb-16">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-4 mb-6">
-              <span className={`text-4xl w-16 h-16 ${tool.color} rounded-xl flex items-center justify-center text-white shadow-md`}>
-                {tool.icon}
-              </span>
-              <div>
-                <span className="text-xs font-semibold text-red-600 uppercase tracking-wider">{tool.category}</span>
-                <h1 className="text-3xl md:text-4xl font-bold text-gray-900">{tool.name}</h1>
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center gap-4">
+                <span className={`text-4xl w-16 h-16 ${tool.color} rounded-xl flex items-center justify-center text-white shadow-md`}>
+                  {tool.icon}
+                </span>
+                <div>
+                  <span className="text-xs font-semibold text-red-600 uppercase tracking-wider">{tool.category}</span>
+                  <h1 className="text-3xl md:text-4xl font-bold text-gray-900">{tool.name}</h1>
+                </div>
               </div>
+              <button
+                onClick={() => window.print()}
+                className="no-print flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium text-gray-700"
+                aria-label="Print this tool"
+              >
+                <Printer size={16} />
+                <span className="hidden sm:inline">Print</span>
+              </button>
             </div>
             <p className="text-lg text-gray-600 mb-8">{tool.description}</p>
 
-            <div className="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-200 mb-12">
+            <div className="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-200 mb-12 tool-result">
               {ToolComponent ? (
                 <Suspense fallback={<div className="text-center py-8"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600 mx-auto"></div></div>}>
                   <ToolComponent />
@@ -121,7 +132,7 @@ const ToolPage = () => {
             </div>
 
             {relatedTools.length > 0 && (
-              <div>
+              <div className="no-print">
                 <h2 className="text-xl font-bold text-gray-900 mb-4">Related Tools</h2>
                 <div className="grid sm:grid-cols-3 gap-4">
                   {relatedTools.map(rt => rt && (

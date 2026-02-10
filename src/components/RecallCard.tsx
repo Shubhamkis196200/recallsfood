@@ -12,14 +12,14 @@ export const RecallCard = ({ recall }: { recall: RecallAlert }) => {
   };
 
   return (
-    <Link to={`/recalls/${recall.slug}`} className="block group">
-      <article className={`bg-white border border-gray-200 border-l-4 ${severityBorder[recall.severity]} rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-200`}>
+    <Link to={`/recalls/${recall.slug}`} className="block group animate-fade-in">
+      <article className={`bg-white border border-gray-200 border-l-4 ${severityBorder[recall.severity]} rounded-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300`}>
         <div className="flex flex-col sm:flex-row">
           <div className="sm:w-48 sm:h-36 h-48 flex-shrink-0">
             <img
               src={recall.image}
               alt={recall.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               loading="lazy"
             />
           </div>

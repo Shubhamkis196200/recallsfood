@@ -73,4 +73,99 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-delay-1 {
+    animation: fadeIn 0.6s ease-out 0.1s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-delay-2 {
+    animation: fadeIn 0.6s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-delay-3 {
+    animation: fadeIn 0.6s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+}
+
+/* Print styles for tools */
+@media print {
+  /* Hide navigation, footer, and non-essential elements */
+  header, footer, nav, .no-print {
+    display: none !important;
+  }
+
+  /* Optimize for printing */
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: black;
+    background: white;
+  }
+
+  /* Prevent page breaks inside elements */
+  .tool-result, .tool-card, table, pre {
+    page-break-inside: avoid;
+  }
+
+  /* Remove shadows and backgrounds for better print quality */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Expand collapsed content */
+  details {
+    display: block;
+  }
+
+  details summary {
+    display: none;
+  }
+
+  /* Make links visible */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    color: #666;
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  /* Optimize tables */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  /* Page margins */
+  @page {
+    margin: 1cm;
+  }
 }

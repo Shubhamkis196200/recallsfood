@@ -15,8 +15,8 @@ export const ArticleCard = ({ article, variant = "default" }: ArticleCardProps) 
 
   if (variant === "featured") {
     return (
-      <Link to={`/article/${article.slug}`} className="group block">
-        <div className="relative aspect-[16/10] overflow-hidden rounded-lg mb-4">
+      <Link to={`/article/${article.slug}`} className="group block animate-fade-in">
+        <div className="relative aspect-[16/10] overflow-hidden rounded-lg mb-4 shadow-md hover:shadow-xl transition-shadow duration-300">
           <img
             src={article.featured_image || '/placeholder.svg'}
             alt={(article as any).featured_image_alt || article.title}
@@ -51,7 +51,7 @@ export const ArticleCard = ({ article, variant = "default" }: ArticleCardProps) 
 
   if (variant === "horizontal") {
     return (
-      <Link to={`/article/${article.slug}`} className="group flex gap-5">
+      <Link to={`/article/${article.slug}`} className="group flex gap-5 animate-fade-in hover:bg-gray-50 p-3 rounded-lg -m-3 transition-all duration-200">
         <div className="relative w-40 h-40 flex-shrink-0 overflow-hidden rounded-lg">
           <img
             src={article.featured_image || '/placeholder.svg'}
@@ -81,8 +81,8 @@ export const ArticleCard = ({ article, variant = "default" }: ArticleCardProps) 
   }
 
   return (
-    <Link to={`/article/${article.slug}`} className="group block">
-      <div className="relative aspect-[4/3] overflow-hidden rounded-lg mb-3">
+    <Link to={`/article/${article.slug}`} className="group block animate-fade-in">
+      <div className="relative aspect-[4/3] overflow-hidden rounded-lg mb-3 shadow-sm hover:shadow-md transition-shadow duration-300">
         <img
           src={article.featured_image || '/placeholder.svg'}
           alt={(article as any).featured_image_alt || article.title}
