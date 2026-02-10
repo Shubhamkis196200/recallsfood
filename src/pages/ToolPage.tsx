@@ -87,6 +87,23 @@ const ToolPage = () => {
       <SEO
         title={`${tool.name} — Free Online Tool | RecallsFood.com`}
         description={tool.description}
+        url={`/tools/${slug}`}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": tool.name,
+            "description": tool.description,
+            "url": `https://recallsfood.com/tools/${slug}`,
+            "applicationCategory": "HealthApplication",
+            "operatingSystem": "Any",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "publisher": { "@type": "Organization", "name": "RecallsFood.com", "url": "https://recallsfood.com" }
+          })
+        }}
       />
       <Header />
       <main className="flex-1">
