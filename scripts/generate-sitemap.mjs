@@ -8,6 +8,8 @@ const today = new Date().toISOString().split('T')[0];
 const staticPages = [
   { url: '/', priority: '1.0', changefreq: 'daily' },
   { url: '/recalls', priority: '0.9', changefreq: 'daily' },
+  { url: '/recalls/today', priority: '0.9', changefreq: 'daily' },
+  { url: '/recalls/this-week', priority: '0.9', changefreq: 'daily' },
   { url: '/guides', priority: '0.8', changefreq: 'weekly' },
   { url: '/blog', priority: '0.8', changefreq: 'weekly' },
   { url: '/archive', priority: '0.6', changefreq: 'weekly' },

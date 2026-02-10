@@ -24,6 +24,8 @@ const BlogIndex = lazy(() => import("./pages/BlogIndex"));
 const PathogenPage = lazy(() => import("./pages/PathogenPage"));
 const Archive = lazy(() => import("./pages/Archive"));
 const Newsletter = lazy(() => import("./pages/Newsletter"));
+const RecallsToday = lazy(() => import("./pages/RecallsToday"));
+const RecallsThisWeek = lazy(() => import("./pages/RecallsThisWeek"));
 const Auth = lazy(() => import("./pages/Auth"));
 const AcceptInvitation = lazy(() => import("./pages/AcceptInvitation"));
 
@@ -65,6 +67,8 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/recalls" element={<RecallsList />} />
+              <Route path="/recalls/today" element={<RecallsToday />} />
+              <Route path="/recalls/this-week" element={<RecallsThisWeek />} />
               <Route path="/recalls/:slug" element={<RecallPage />} />
               <Route path="/category/:slug" element={<CategoryPage />} />
               <Route path="/stores/:slug" element={<StorePage />} />

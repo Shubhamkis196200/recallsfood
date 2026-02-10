@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="30" fill="#DC2626" />
+  <circle cx="32" cy="32" r="24" fill="white" />
+  <circle cx="32" cy="32" r="8" fill="#DC2626" />
+  <!-- Fork prongs -->
+  <rect x="22" y="6" width="3" height="18" rx="1.5" fill="#DC2626"/>
+  <rect x="30.5" y="6" width="3" height="18" rx="1.5" fill="#DC2626"/>
+  <rect x="39" y="6" width="3" height="18" rx="1.5" fill="#DC2626"/>
+  <!-- Fork handle -->
+  <rect x="30.5" y="22" width="3" height="20" rx="1.5" fill="#DC2626"/>
+</svg>

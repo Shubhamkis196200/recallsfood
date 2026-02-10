@@ -138,6 +138,30 @@ const articles = [
     author: 'RecallsFood Team',
     body: 'Food recalls have increased dramatically over the past five years. We examine the data, the causes, and what it means for consumers.',
   },
+  {
+    slug: 'listeria-101-symptoms-risks-protection',
+    title: 'Listeria 101: Symptoms, Risks, and How to Protect Your Family',
+    date: '2026-01-15',
+    category: 'Food Safety Guides',
+    author: 'Dr. Sarah Mitchell',
+    body: 'Listeria monocytogenes is one of the deadliest foodborne pathogens, with a fatality rate of 20-30% among high-risk groups. Unlike most bacteria, Listeria can grow at refrigerator temperatures, making it particularly dangerous. This guide covers symptoms to watch for, who is most at risk, and practical steps to protect your family.',
+  },
+  {
+    slug: 'safe-cooking-temperatures-printable-chart',
+    title: 'Safe Cooking Temperatures for Every Type of Meat (Printable Chart)',
+    date: '2026-01-10',
+    category: 'Food Safety Guides',
+    author: 'Chef James Rodriguez',
+    body: 'Cooking meat to the correct internal temperature is the most reliable way to kill harmful bacteria. The USDA recommends specific minimum temperatures for different types of meat: 165°F for poultry, 160°F for ground meats, and 145°F for whole cuts of beef, pork, lamb, and veal. Use this printable chart as a quick reference in your kitchen.',
+  },
+  {
+    slug: 'walmart-food-recalls-2026-complete-list',
+    title: 'Walmart Food Recalls 2026: Complete Updated List',
+    date: '2026-02-05',
+    category: 'Store Recalls',
+    author: 'RecallsFood Team',
+    body: 'Walmart is the largest grocery retailer in the United States, and food recalls affecting Walmart stores impact millions of consumers. This continuously updated list tracks every food recall affecting Walmart locations in 2026, including store brands and national brands sold at Walmart.',
+  },
 ];
 
 function generateMd(item, type) {
