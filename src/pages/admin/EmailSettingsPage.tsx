@@ -125,7 +125,7 @@ const EmailSettingsPage = () => {
     <div className="space-y-6 max-w-2xl">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="font-serif text-3xl">Email Settings</h1>
+          <h1 className="font-bold text-3xl">Email Settings</h1>
           <p className="text-muted-foreground">Configure email provider for sending invitations and notifications</p>
         </div>
         <Mail className="h-8 w-8 text-muted-foreground" />
@@ -133,7 +133,7 @@ const EmailSettingsPage = () => {
 
       {/* Provider Selection */}
       <div className="border border-border rounded-lg p-6 space-y-4">
-        <h2 className="font-serif text-xl">Email Provider</h2>
+        <h2 className="font-bold text-xl">Email Provider</h2>
         
         <div className="space-y-2">
           <Label>Provider</Label>
@@ -168,7 +168,7 @@ const EmailSettingsPage = () => {
               id="fromName"
               value={fromName}
               onChange={(e) => setFromName(e.target.value)}
-              placeholder="LUXE EDITORIAL"
+              placeholder="RecallsFood"
             />
           </div>
         </div>
@@ -213,7 +213,7 @@ const EmailSettingsPage = () => {
 
       {/* Test Email */}
       <div className="border border-border rounded-lg p-6 space-y-4">
-        <h2 className="font-serif text-xl">Test Email</h2>
+        <h2 className="font-bold text-xl">Test Email</h2>
         <p className="text-sm text-muted-foreground">Send a test email to verify your configuration</p>
         
         <div className="flex gap-4">

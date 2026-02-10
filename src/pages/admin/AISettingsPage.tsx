@@ -30,7 +30,7 @@ const PROVIDER_OPTIONS = [
 const TONE_OPTIONS = [
   "professional",
   "casual",
-  "luxury",
+  "food-safety",
   "technical",
   "conversational",
   "academic",
@@ -1004,7 +1004,7 @@ function TonePresetsTab() {
                 <div className="space-y-2">
                   <Label>Name</Label>
                   <Input
-                    placeholder="e.g., Luxury Editorial"
+                    placeholder="e.g., RecallsFood"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   />

@@ -111,8 +111,8 @@ const ArticlePage = () => {
         <Header />
         <main className="flex-1 flex items-center justify-center">
           <div className="text-center">
-            <h1 className="font-serif text-4xl mb-4">Article Not Found</h1>
-            <p className="text-muted-foreground font-body">The article you're looking for doesn't exist.</p>
+            <h1 className="font-bold text-4xl mb-4">Article Not Found</h1>
+            <p className="text-muted-foreground ">The article you're looking for doesn't exist.</p>
           </div>
         </main>
         <Footer />
@@ -128,7 +128,7 @@ const ArticlePage = () => {
   const readTime = article.read_time_minutes || 5;
   const viewCount = article.view_count || 0;
 
-  const metaDescription = article.meta_description || article.excerpt || article.subtitle || `Read ${article.title} on Global Luxe Times`;
+  const metaDescription = article.meta_description || article.excerpt || article.subtitle || `Read ${article.title} on RecallsFood.com`;
 
   // Breadcrumb items for JSON-LD
   const breadcrumbItems = [
@@ -176,17 +176,17 @@ const ArticlePage = () => {
 
           {/* Article Header */}
           <div className="mb-12">
-            <div className="text-xs tracking-widest text-gold mb-4 font-body">
+            <div className="text-xs tracking-widest text-red-600 mb-4 ">
               {categoryName.toUpperCase()}
             </div>
-            <h1 className="font-serif text-4xl md:text-6xl mb-6 leading-tight">{article.title}</h1>
+            <h1 className="font-bold text-4xl md:text-6xl mb-6 leading-tight">{article.title}</h1>
             {article.subtitle && (
-              <p className="article-excerpt text-2xl text-muted-foreground font-body mb-8 leading-relaxed">
+              <p className="article-excerpt text-2xl text-muted-foreground  mb-8 leading-relaxed">
                 {article.subtitle}
               </p>
             )}
 
-            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground font-body mb-4">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground  mb-4">
               <span className="font-medium text-foreground">By {authorName}</span>
               <span>•</span>
               <span>{new Date(publishedDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
@@ -215,7 +215,7 @@ const ArticlePage = () => {
               />
             </div>
 
-            <div className="editorial-divider"></div>
+            <div className="border-t border-gray-200"></div>
           </div>
 
           {/* Featured Image */}
@@ -233,14 +233,14 @@ const ArticlePage = () => {
           {/* Article Content */}
           <div className="prose prose-lg max-w-none">
             {article.excerpt && (
-              <p className="article-excerpt text-xl font-body leading-relaxed mb-6 first-letter:text-6xl first-letter:font-serif first-letter:float-left first-letter:mr-3 first-letter:mt-1">
+              <p className="article-excerpt text-xl  leading-relaxed mb-6 first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:mt-1">
                 {article.excerpt}
               </p>
             )}
 
             {article.content && (
               <div 
-                className="space-y-6 font-body text-lg leading-relaxed"
+                className="space-y-6  text-lg leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: sanitizeHtml(article.content) }}
               />
             )}
@@ -249,7 +249,7 @@ const ArticlePage = () => {
           {/* Tags */}
           {tags && tags.length > 0 && (
             <div className="mt-12 pt-8 border-t border-border">
-              <h3 className="text-sm font-body text-muted-foreground mb-3">Tags</h3>
+              <h3 className="text-sm  text-muted-foreground mb-3">Tags</h3>
               <TagList tags={tags} />
             </div>
           )}
@@ -266,15 +266,15 @@ const ArticlePage = () => {
                     className="w-12 h-12 rounded-full object-cover"
                   />
                 ) : (
-                  <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center">
-                    <span className="font-serif text-xl text-gold">
+                  <div className="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center">
+                    <span className="font-bold text-xl text-red-600">
                       {authorName.charAt(0)}
                     </span>
                   </div>
                 )}
                 <div>
-                  <div className="font-medium font-body">{authorName}</div>
-                  <div className="text-sm text-muted-foreground font-body">Contributing Editor</div>
+                  <div className="font-medium ">{authorName}</div>
+                  <div className="text-sm text-muted-foreground ">Contributing Editor</div>
                 </div>
               </div>
               <SocialShare 

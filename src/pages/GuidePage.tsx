@@ -4,6 +4,9 @@ import { Footer } from "@/components/Footer";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { guides } from "@/data/recalls";
 import SEO from "@/components/SEO";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import FAQPageJsonLd from "@/components/FAQPageJsonLd";
 
 const GuidePage = () => {
   const { slug } = useParams();
@@ -25,6 +28,28 @@ const GuidePage = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO title={`${guide.title} | RecallsFood`} description={guide.excerpt} />
+      <ArticleJsonLd
+        title={guide.title}
+        description={guide.excerpt}
+        url={`/guides/${guide.slug}`}
+        image={guide.image}
+        publishedTime={guide.date}
+        authorName={guide.author}
+        section="Food Safety Guides"
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Guides", url: "/guides" },
+          { name: guide.title, url: `/guides/${guide.slug}` },
+        ]}
+      />
+      <FAQPageJsonLd
+        items={[
+          { question: `What is this guide about?`, answer: guide.excerpt },
+          { question: `Who wrote this guide?`, answer: `This guide was written by ${guide.author} for RecallsFood.com.` },
+        ]}
+      />
       <Header />
       <main className="flex-1">
         <div className="container mx-auto px-4 py-8">

@@ -7,6 +7,8 @@ import { RecallCard } from "@/components/RecallCard";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { recalls } from "@/data/recalls";
 import SEO from "@/components/SEO";
+import ArticleJsonLd from "@/components/ArticleJsonLd";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const RecallPage = () => {
   const { slug } = useParams();
@@ -33,6 +35,22 @@ const RecallPage = () => {
       <SEO
         title={`${recall.title} | RecallsFood`}
         description={recall.excerpt}
+      />
+      <ArticleJsonLd
+        title={recall.title}
+        description={recall.excerpt}
+        url={`/recalls/${recall.slug}`}
+        image={recall.image}
+        publishedTime={recall.dateIssued}
+        authorName="RecallsFood Team"
+        section="Food Recalls"
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Recalls", url: "/recalls" },
+          { name: recall.brand, url: `/recalls/${recall.slug}` },
+        ]}
       />
       <Header />
 

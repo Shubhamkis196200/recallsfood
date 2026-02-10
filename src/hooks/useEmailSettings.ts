@@ -78,7 +78,7 @@ export const useTestEmailSettings = () => {
       const { data, error } = await supabase.functions.invoke('send-email', {
         body: {
           to: testEmail,
-          subject: 'Test Email from LUXE EDITORIAL',
+          subject: 'Test Email from RecallsFood',
           html: '<h1>Test Email</h1><p>This is a test email to verify your email settings are configured correctly.</p>',
           isTest: true,
         },

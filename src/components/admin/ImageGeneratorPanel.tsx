@@ -95,7 +95,7 @@ export function ImageGeneratorPanel({
       
       const result = await generateImage.mutateAsync({
         model_id: selectedModelId,
-        prompt: `Featured image for luxury magazine article: "${blogTitle}"`,
+        prompt: `Featured image for food safety article: "${blogTitle}"`,
         context: textContent,
         article_title: blogTitle,
         alt_text_hint: `Featured image for ${blogTitle}`,

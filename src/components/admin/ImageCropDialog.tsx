@@ -147,7 +147,7 @@ export const ImageCropDialog = ({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-3xl">
         <DialogHeader>
-          <DialogTitle className="font-serif">Crop Image</DialogTitle>
+          <DialogTitle className="font-bold">Crop Image</DialogTitle>
         </DialogHeader>
 
         <div className="space-y-4">

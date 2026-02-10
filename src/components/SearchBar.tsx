@@ -100,21 +100,21 @@ export const SearchBar = ({
                     />
                   )}
                   <div className="flex-1 min-w-0">
-                    <div className="text-xs text-gold font-body mb-1">
+                    <div className="text-xs text-red-600  mb-1">
                       {post.category?.name?.toUpperCase() || "ARTICLE"}
                     </div>
-                    <h4 className="font-serif text-sm line-clamp-2">{post.title}</h4>
+                    <h4 className="font-bold text-sm line-clamp-2">{post.title}</h4>
                   </div>
                 </Link>
               ))}
               {results.length > 5 && (
-                <div className="p-3 text-center text-sm text-muted-foreground font-body">
+                <div className="p-3 text-center text-sm text-muted-foreground ">
                   +{results.length - 5} more results
                 </div>
               )}
             </div>
           ) : (
-            <div className="p-6 text-center text-muted-foreground font-body">
+            <div className="p-6 text-center text-muted-foreground ">
               No articles found for "{query}"
             </div>
           )}

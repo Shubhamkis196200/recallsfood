@@ -20,10 +20,10 @@ export const TagList = ({ tags, variant = "default" }: TagListProps) => {
         <Link
           key={tag.id}
           to={`/tag/${tag.slug}`}
-          className={`inline-flex items-center font-body transition-colors ${
+          className={`inline-flex items-center  transition-colors ${
             variant === "compact"
               ? "text-xs px-2 py-0.5 bg-secondary/50 hover:bg-secondary text-muted-foreground hover:text-foreground"
-              : "text-sm px-3 py-1 border border-border hover:border-gold hover:text-gold"
+              : "text-sm px-3 py-1 border border-border hover:border-red-600 hover:text-red-600"
           }`}
         >
           #{tag.name}

@@ -461,7 +461,7 @@ export function AIWriterPanel({ onContentGenerated, onTagSuggestionClick, onFeat
       const result = await generateMutation.mutateAsync({
         model_id: selectedModelId,
         preset_id: selectedPresetId || undefined,
-        topic: `Generate ONLY a meta title (48-58 characters exactly) for an article titled "${generatedContent.title}". Target keyword: ${targetKeyword || 'luxury lifestyle'}. Return ONLY the meta title text, nothing else.`,
+        topic: `Generate ONLY a meta title (48-58 characters exactly) for an article titled "${generatedContent.title}". Target keyword: ${targetKeyword || 'food safety'}. Return ONLY the meta title text, nothing else.`,
         word_count_min: 50,
         word_count_max: 100,
         custom_instructions: "Return ONLY the meta title text (48-58 chars). No JSON, no quotes, no explanation.",
@@ -482,7 +482,7 @@ export function AIWriterPanel({ onContentGenerated, onTagSuggestionClick, onFeat
       const result = await generateMutation.mutateAsync({
         model_id: selectedModelId,
         preset_id: selectedPresetId || undefined,
-        topic: `Generate ONLY a meta description (140-158 characters exactly) for an article titled "${generatedContent.title}" with excerpt: "${generatedContent.excerpt}". Target keyword: ${targetKeyword || 'luxury lifestyle'}. Return ONLY the meta description text, nothing else.`,
+        topic: `Generate ONLY a meta description (140-158 characters exactly) for an article titled "${generatedContent.title}" with excerpt: "${generatedContent.excerpt}". Target keyword: ${targetKeyword || 'food safety'}. Return ONLY the meta description text, nothing else.`,
         word_count_min: 100,
         word_count_max: 200,
         custom_instructions: "Return ONLY the meta description text (140-158 chars). No JSON, no quotes, no explanation.",
@@ -616,7 +616,7 @@ export function AIWriterPanel({ onContentGenerated, onTagSuggestionClick, onFeat
           <div className="space-y-2">
             <Label>Topic / Prompt *</Label>
             <Textarea
-              placeholder="Describe what you want to write about, e.g., 'Sustainable luxury fashion trends for 2024'"
+              placeholder="Describe what you want to write about, e.g., 'FDA food recall trends and safety tips for 2024'"
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
               rows={3}
@@ -626,7 +626,7 @@ export function AIWriterPanel({ onContentGenerated, onTagSuggestionClick, onFeat
           <div className="space-y-2">
             <Label>Target Keywords (for SEO)</Label>
             <Input
-              placeholder="e.g., sustainable luxury fashion, eco fashion, green luxury"
+              placeholder="e.g., food recalls, FDA alerts, food safety"
               value={targetKeyword}
               onChange={(e) => setTargetKeyword(e.target.value)}
             />

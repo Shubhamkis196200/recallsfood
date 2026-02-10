@@ -13,7 +13,7 @@ const NotFound = () => {
     <div className="flex min-h-screen items-center justify-center bg-muted">
       <SEO 
         title="Page Not Found"
-        description="The page you are looking for does not exist. Return to Global Luxe Times homepage."
+        description="The page you are looking for does not exist. Return to RecallsFood.com homepage."
         noIndex={true}
       />
       <div className="text-center">

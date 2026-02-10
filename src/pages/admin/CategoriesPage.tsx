@@ -110,7 +110,7 @@ const CategoriesPage = () => {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="font-serif text-3xl mb-2">Categories</h1>
+          <h1 className="font-bold text-3xl mb-2">Categories</h1>
           <p className="text-muted-foreground font-body">
             Organize your posts with categories
           </p>
@@ -127,7 +127,7 @@ const CategoriesPage = () => {
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle className="font-serif text-2xl">
+              <DialogTitle className="font-bold text-2xl">
                 {editingCategory ? 'Edit Category' : 'New Category'}
               </DialogTitle>
             </DialogHeader>
@@ -222,7 +222,7 @@ const CategoriesPage = () => {
                   <td className="p-4 text-sm text-muted-foreground font-body">
                     {category.display_order}
                   </td>
-                  <td className="p-4 font-serif text-lg">{category.name}</td>
+                  <td className="p-4 font-bold text-lg">{category.name}</td>
                   <td className="p-4 text-sm text-muted-foreground font-body">
                     {category.slug}
                   </td>

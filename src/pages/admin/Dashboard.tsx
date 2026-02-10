@@ -43,7 +43,7 @@ const Dashboard = () => {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="font-serif text-3xl mb-2">Dashboard</h1>
+        <h1 className="font-bold text-3xl mb-2">Dashboard</h1>
         <p className="text-muted-foreground font-body">Overview of your content management</p>
       </div>
 
@@ -56,9 +56,9 @@ const Dashboard = () => {
             className="border border-border p-6 hover:border-gold transition-colors group"
           >
             <div className="flex items-center justify-between mb-4">
-              <stat.icon className="w-5 h-5 text-muted-foreground group-hover:text-gold transition-colors" />
+              <stat.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
             </div>
-            <div className="font-serif text-4xl mb-1">{stat.value}</div>
+            <div className="font-bold text-4xl mb-1">{stat.value}</div>
             <div className="text-sm text-muted-foreground font-body">{stat.label}</div>
           </Link>
         ))}
@@ -67,10 +67,10 @@ const Dashboard = () => {
       {/* Recent Posts */}
       <div className="border border-border">
         <div className="p-4 border-b border-border flex items-center justify-between">
-          <h2 className="font-serif text-xl">Recent Posts</h2>
+          <h2 className="font-bold text-xl">Recent Posts</h2>
           <Link 
             to="/admin/posts" 
-            className="text-sm text-muted-foreground hover:text-gold transition-colors font-body"
+            className="text-sm text-muted-foreground hover:text-primary transition-colors font-body"
           >
             View all →
           </Link>
@@ -78,7 +78,7 @@ const Dashboard = () => {
         <div className="divide-y divide-border">
           {recentPosts.length === 0 ? (
             <div className="p-8 text-center text-muted-foreground font-body">
-              No posts yet. <Link to="/admin/posts/new" className="text-gold hover:underline">Create your first post</Link>
+              No posts yet. <Link to="/admin/posts/new" className="text-primary hover:underline">Create your first post</Link>
             </div>
           ) : (
             recentPosts.map((post) => (
@@ -88,7 +88,7 @@ const Dashboard = () => {
                 className="p-4 flex items-center justify-between hover:bg-secondary/30 transition-colors"
               >
                 <div>
-                  <h3 className="font-serif text-lg mb-1">{post.title}</h3>
+                  <h3 className="font-bold text-lg mb-1">{post.title}</h3>
                   <div className="flex items-center gap-4 text-sm text-muted-foreground font-body">
                     <span className={`px-2 py-0.5 text-xs uppercase tracking-wider ${
                       post.status === 'published' 
@@ -118,14 +118,14 @@ const Dashboard = () => {
           className="border border-border p-6 text-center hover:border-gold hover:bg-secondary/30 transition-all"
         >
           <FileText className="w-8 h-8 mx-auto mb-3 text-muted-foreground" />
-          <span className="font-serif text-lg">Create New Post</span>
+          <span className="font-bold text-lg">Create New Post</span>
         </Link>
         <Link
           to="/admin/categories"
           className="border border-border p-6 text-center hover:border-gold hover:bg-secondary/30 transition-all"
         >
           <FolderOpen className="w-8 h-8 mx-auto mb-3 text-muted-foreground" />
-          <span className="font-serif text-lg">Manage Categories</span>
+          <span className="font-bold text-lg">Manage Categories</span>
         </Link>
         <Link
           to="/"
@@ -133,7 +133,7 @@ const Dashboard = () => {
           className="border border-border p-6 text-center hover:border-gold hover:bg-secondary/30 transition-all"
         >
           <Eye className="w-8 h-8 mx-auto mb-3 text-muted-foreground" />
-          <span className="font-serif text-lg">View Live Site</span>
+          <span className="font-bold text-lg">View Live Site</span>
         </Link>
       </div>
     </div>

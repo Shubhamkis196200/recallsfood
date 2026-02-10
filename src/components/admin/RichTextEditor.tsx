@@ -865,7 +865,7 @@ export const RichTextEditor = ({ content, onChange, placeholder = 'Write your co
       <Dialog open={imagePickerOpen} onOpenChange={(open) => !open && resetImageDialog()}>
         <DialogContent className="max-w-4xl max-h-[90vh] flex flex-col">
           <DialogHeader>
-            <DialogTitle className="font-serif">Insert Image</DialogTitle>
+            <DialogTitle className="font-bold">Insert Image</DialogTitle>
           </DialogHeader>
           
           <div className="flex items-center justify-between py-2 border-b border-border">
@@ -900,7 +900,7 @@ export const RichTextEditor = ({ content, onChange, placeholder = 'Write your co
             ) : !media?.length ? (
               <div className="border-2 border-dashed border-border rounded-lg p-12 text-center">
                 <ImageIcon className="w-12 h-12 mx-auto text-muted-foreground/50 mb-4" />
-                <h3 className="font-serif text-lg mb-2">No images yet</h3>
+                <h3 className="font-bold text-lg mb-2">No images yet</h3>
                 <p className="text-muted-foreground font-body text-sm mb-4">
                   Upload an image to get started
                 </p>
@@ -1048,7 +1048,7 @@ export const RichTextEditor = ({ content, onChange, placeholder = 'Write your co
       <Dialog open={tableDialogOpen} onOpenChange={setTableDialogOpen}>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle className="font-serif">Insert Table</DialogTitle>
+            <DialogTitle className="font-bold">Insert Table</DialogTitle>
           </DialogHeader>
           
           <div className="space-y-4 py-4">
@@ -1104,7 +1104,7 @@ export const RichTextEditor = ({ content, onChange, placeholder = 'Write your co
       <Dialog open={videoDialogOpen} onOpenChange={setVideoDialogOpen}>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle className="font-serif">Insert Video</DialogTitle>
+            <DialogTitle className="font-bold">Insert Video</DialogTitle>
           </DialogHeader>
           
           <div className="space-y-4 py-4">
@@ -1141,7 +1141,7 @@ export const RichTextEditor = ({ content, onChange, placeholder = 'Write your co
       <Dialog open={imageUrlDialogOpen} onOpenChange={setImageUrlDialogOpen}>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle className="font-serif">Insert Image from URL</DialogTitle>
+            <DialogTitle className="font-bold">Insert Image from URL</DialogTitle>
           </DialogHeader>
           
           <div className="space-y-4 py-4">
@@ -1243,7 +1243,7 @@ export const RichTextEditor = ({ content, onChange, placeholder = 'Write your co
       <Dialog open={linkDialogOpen} onOpenChange={setLinkDialogOpen}>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle className="font-serif">Insert Link</DialogTitle>
+            <DialogTitle className="font-bold">Insert Link</DialogTitle>
           </DialogHeader>
           
           <div className="space-y-4 py-4">

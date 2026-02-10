@@ -149,7 +149,7 @@ const AuthorsPage = () => {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="font-serif text-3xl">Authors</h1>
+          <h1 className="font-bold text-3xl">Authors</h1>
           <p className="text-muted-foreground font-body mt-1">
             Manage authors and editorial team members
           </p>
@@ -180,7 +180,7 @@ const AuthorsPage = () => {
                   </div>
                 )}
                 <div>
-                  <h3 className="font-serif text-lg">{author.name}</h3>
+                  <h3 className="font-bold text-lg">{author.name}</h3>
                   {!author.is_active && (
                     <span className="text-xs text-muted-foreground bg-secondary px-2 py-0.5 rounded">
                       Inactive
@@ -229,7 +229,7 @@ const AuthorsPage = () => {
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle className="font-serif">
+            <DialogTitle className="font-bold">
               {editingAuthor ? 'Edit Author' : 'Add Author'}
             </DialogTitle>
           </DialogHeader>

@@ -70,7 +70,7 @@ const ApiDocsPage = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-serif mb-2">API Documentation</h1>
+        <h1 className="text-3xl font-bold mb-2">API Documentation</h1>
         <p className="text-muted-foreground font-body">
           Complete reference for the CMS REST API (V5)
         </p>
@@ -435,8 +435,8 @@ const ApiDocsPage = () => {
                 <CodeBlock code={`[
   {
     "id": "uuid-here",
-    "name": "Luxury Fashion",
-    "slug": "luxury-fashion",
+    "name": "Food Safety",
+    "slug": "food-safety",
     "created_at": "2024-01-01T00:00:00Z"
   }
 ]`} />
@@ -677,9 +677,9 @@ curl -H "x-api-key: your_api_key" "${baseUrl}/authors?include_inactive=true"`} /
                 <CodeBlock code={`[
   {
     "id": "uuid-here",
-    "name": "Luxury Fashion",
-    "slug": "luxury-fashion",
-    "description": "Latest in luxury fashion",
+    "name": "Food Safety",
+    "slug": "food-safety",
+    "description": "Latest food safety news",
     "image_url": "https://example.com/category.jpg",
     "display_order": 1
   }
@@ -751,7 +751,7 @@ curl -H "x-api-key: your_api_key" "${baseUrl}/authors?include_inactive=true"`} /
               </div>
               <CodeBlock code={`curl -X POST -H "x-api-key: your_api_key" \\
   -H "Content-Type: application/json" \\
-  -d '{"name": "Tech & Innovation", "description": "Technology in luxury"}' \\
+  -d '{"name": "Tech & Innovation", "description": "Technology in food safety"}' \\
   "${baseUrl}/categories"`} />
             </CardContent>
           </Card>

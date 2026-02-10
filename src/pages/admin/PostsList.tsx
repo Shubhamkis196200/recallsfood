@@ -173,7 +173,7 @@ const PostsList = () => {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="font-serif text-3xl mb-2">Posts</h1>
+          <h1 className="font-bold text-3xl mb-2">Posts</h1>
           <p className="text-muted-foreground font-body">
             Manage your articles and blog posts
           </p>
@@ -374,7 +374,7 @@ const PostsList = () => {
                       <div>
                         <Link 
                           to={`/admin/posts/${post.id}`}
-                          className="font-serif text-lg hover:text-gold transition-colors"
+                          className="font-bold text-lg hover:text-primary transition-colors"
                         >
                           {post.title}
                         </Link>
@@ -408,7 +408,7 @@ const PostsList = () => {
                         {post.status}
                       </span>
                       {post.is_featured && (
-                        <span className="ml-2 px-2 py-1 text-xs uppercase tracking-wider bg-gold/20 text-gold-dark">
+                        <span className="ml-2 px-2 py-1 text-xs uppercase tracking-wider bg-primary/20 text-primary-dark">
                           Featured
                         </span>
                       )}
@@ -531,7 +531,7 @@ const PostsList = () => {
       <Dialog open={!!previewPost} onOpenChange={() => setPreviewPost(null)}>
         <DialogContent className="max-w-4xl max-h-[90vh]">
           <DialogHeader>
-            <DialogTitle className="font-serif text-xl">
+            <DialogTitle className="font-bold text-xl">
               Draft Preview: {previewPost?.title}
             </DialogTitle>
           </DialogHeader>
@@ -547,7 +547,7 @@ const PostsList = () => {
                 )}
                 
                 <div className="space-y-2">
-                  <h1 className="font-serif text-3xl font-bold">{previewPost.title}</h1>
+                  <h1 className="font-bold text-3xl font-bold">{previewPost.title}</h1>
                   {previewPost.subtitle && (
                     <p className="text-lg text-muted-foreground">{previewPost.subtitle}</p>
                   )}

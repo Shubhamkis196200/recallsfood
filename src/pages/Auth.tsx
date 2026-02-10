@@ -75,12 +75,12 @@ const Auth = () => {
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <h1 className="font-serif text-4xl mb-2">LUXE EDITORIAL</h1>
-          <p className="text-muted-foreground font-body">Content Management</p>
+          <h1 className="font-bold text-4xl mb-2">RecallsFood Admin</h1>
+          <p className="text-muted-foreground">Content Management</p>
         </div>
 
         <div className="border border-border p-8 bg-card">
-          <h2 className="font-serif text-xl mb-6 text-center">Sign In</h2>
+          <h2 className="font-bold text-xl mb-6 text-center">Sign In</h2>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>

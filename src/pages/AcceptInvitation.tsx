@@ -164,7 +164,7 @@ const AcceptInvitation = () => {
       <div className="min-h-screen flex items-center justify-center bg-background px-4">
         <div className="w-full max-w-md text-center">
           <XCircle className="h-16 w-16 text-destructive mx-auto mb-4" />
-          <h1 className="font-serif text-2xl mb-2">Invalid Invitation</h1>
+          <h1 className="font-bold text-2xl mb-2">Invalid Invitation</h1>
           <p className="text-muted-foreground mb-6">{error}</p>
           <Button onClick={() => navigate('/auth')}>Go to Login</Button>
         </div>
@@ -177,7 +177,7 @@ const AcceptInvitation = () => {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-          <h1 className="font-serif text-3xl mb-2">Welcome to LUXE EDITORIAL</h1>
+          <h1 className="font-bold text-3xl mb-2">Welcome to RecallsFood</h1>
           <p className="text-muted-foreground">
             You've been invited as <span className="font-semibold capitalize">{invitation?.role}</span>
           </p>

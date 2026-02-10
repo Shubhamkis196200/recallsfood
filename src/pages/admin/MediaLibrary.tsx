@@ -195,7 +195,7 @@ const MediaLibrary = () => {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="font-serif text-3xl">Media Library</h1>
+          <h1 className="font-bold text-3xl">Media Library</h1>
           <p className="text-muted-foreground font-body mt-1">
             Upload and manage images for your posts
           </p>
@@ -270,7 +270,7 @@ const MediaLibrary = () => {
       ) : !media?.length ? (
         <div className="border-2 border-dashed border-border rounded-lg p-12 text-center">
           <ImageIcon className="w-12 h-12 mx-auto text-muted-foreground/50 mb-4" />
-          <h3 className="font-serif text-lg mb-2">No images yet</h3>
+          <h3 className="font-bold text-lg mb-2">No images yet</h3>
           <p className="text-muted-foreground font-body text-sm mb-4">
             Upload images to use in your posts
           </p>
@@ -355,7 +355,7 @@ const MediaLibrary = () => {
       <Dialog open={!!selectedMedia} onOpenChange={() => setSelectedMedia(null)}>
         <DialogContent className="max-w-2xl">
           <DialogHeader>
-            <DialogTitle className="font-serif">Media Details</DialogTitle>
+            <DialogTitle className="font-bold">Media Details</DialogTitle>
           </DialogHeader>
           {selectedMedia && (
             <div className="grid grid-cols-2 gap-6">
@@ -440,7 +440,7 @@ const MediaLibrary = () => {
       <AlertDialog open={!!deleteTarget} onOpenChange={() => setDeleteTarget(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle className="font-serif">Delete Image?</AlertDialogTitle>
+            <AlertDialogTitle className="font-bold">Delete Image?</AlertDialogTitle>
             <AlertDialogDescription className="font-body">
               This will permanently delete "{deleteTarget?.file_name}". This action cannot be undone.
             </AlertDialogDescription>
@@ -461,7 +461,7 @@ const MediaLibrary = () => {
       <AlertDialog open={showBulkDeleteDialog} onOpenChange={setShowBulkDeleteDialog}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle className="font-serif">Delete {selectedIds.size} Images?</AlertDialogTitle>
+            <AlertDialogTitle className="font-bold">Delete {selectedIds.size} Images?</AlertDialogTitle>
             <AlertDialogDescription className="font-body">
               This will permanently delete {selectedIds.size} selected images. This action cannot be undone.
             </AlertDialogDescription>

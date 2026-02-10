@@ -20,7 +20,7 @@ export const ReadingProgress = () => {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 h-1 bg-secondary">
       <div
-        className="h-full bg-gold transition-all duration-150 ease-out"
+        className="h-full bg-red-600 transition-all duration-150 ease-out"
         style={{ width: `${progress}%` }}
       />
     </div>

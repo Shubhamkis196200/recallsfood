@@ -325,7 +325,7 @@ const PostEditor = () => {
             <ArrowLeft className="w-5 h-5" />
           </button>
           <div>
-            <h1 className="font-serif text-3xl">
+            <h1 className="font-bold text-3xl">
               {isEditing ? 'Edit Post' : 'New Post'}
             </h1>
             {formData.status === 'scheduled' && formData.scheduled_at && (
@@ -380,7 +380,7 @@ const PostEditor = () => {
                     value={formData.title}
                     onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                     placeholder="Enter post title"
-                    className="mt-1 font-serif text-xl"
+                    className="mt-1 font-bold text-xl"
                   />
                 </div>
 
@@ -476,7 +476,7 @@ const PostEditor = () => {
         <div className="space-y-6">
           {/* Category & Status */}
           <div className="border border-border p-6 space-y-4">
-            <h3 className="font-serif text-lg border-b border-border pb-2">Settings</h3>
+            <h3 className="font-bold text-lg border-b border-border pb-2">Settings</h3>
             
             <div>
               <Label className="font-body text-sm">Category</Label>
@@ -537,7 +537,7 @@ const PostEditor = () => {
 
           {/* Tags */}
           <div className="border border-border p-6 space-y-4">
-            <h3 className="font-serif text-lg border-b border-border pb-2">Tags</h3>
+            <h3 className="font-bold text-lg border-b border-border pb-2">Tags</h3>
             <TagSelector
               postId={id}
               selectedTagIds={selectedTagIds}
@@ -547,7 +547,7 @@ const PostEditor = () => {
 
           {/* Schedule */}
           <div className="border border-border p-6 space-y-4">
-            <h3 className="font-serif text-lg border-b border-border pb-2">Schedule</h3>
+            <h3 className="font-bold text-lg border-b border-border pb-2">Schedule</h3>
             
             {formData.scheduled_at ? (
               <div className="space-y-3">
@@ -625,7 +625,7 @@ const PostEditor = () => {
 
           {/* Featured Image */}
           <div className="border border-border p-6 space-y-4">
-            <h3 className="font-serif text-lg border-b border-border pb-2">Featured Image</h3>
+            <h3 className="font-bold text-lg border-b border-border pb-2">Featured Image</h3>
             {formData.featured_image ? (
               <div className="space-y-3">
                 <div className="aspect-video bg-secondary/30 overflow-hidden rounded">
@@ -696,7 +696,7 @@ const PostEditor = () => {
 
           {/* SEO */}
           <div className="border border-border p-6 space-y-4">
-            <h3 className="font-serif text-lg border-b border-border pb-2">SEO</h3>
+            <h3 className="font-bold text-lg border-b border-border pb-2">SEO</h3>
             <div>
               <div className="flex items-center justify-between">
                 <Label htmlFor="meta_title" className="font-body text-sm">Meta Title</Label>

@@ -65,8 +65,8 @@ const AdminLayout = () => {
       <aside className="w-64 bg-foreground text-background flex flex-col">
         <div className="p-6 border-b border-background/10">
           <Link to="/admin" className="block">
-            <h1 className="font-serif text-xl">LUXE EDITORIAL</h1>
-            <p className="text-xs text-background/60 mt-1 font-body">Content Management</p>
+            <h1 className="font-bold text-xl">RecallsFood Admin</h1>
+            <p className="text-xs text-background/60 mt-1">Content Management</p>
           </Link>
         </div>
 

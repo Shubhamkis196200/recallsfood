@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /auth
+Disallow: /accept-invite
 
+# Sitemaps
 Sitemap: https://recallsfood.com/sitemap.xml
+
+# Crawl-delay (optional, for polite bots)
+Crawl-delay: 1

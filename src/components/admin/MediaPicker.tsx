@@ -83,7 +83,7 @@ export const MediaPicker = ({ value, onChange, trigger }: MediaPickerProps) => {
       </DialogTrigger>
       <DialogContent className="max-w-4xl max-h-[80vh] flex flex-col">
         <DialogHeader>
-          <DialogTitle className="font-serif">Select Image</DialogTitle>
+          <DialogTitle className="font-bold">Select Image</DialogTitle>
         </DialogHeader>
         
         <div className="flex items-center justify-between py-2 border-b border-border">
@@ -118,7 +118,7 @@ export const MediaPicker = ({ value, onChange, trigger }: MediaPickerProps) => {
           ) : !media?.length ? (
             <div className="border-2 border-dashed border-border rounded-lg p-12 text-center">
               <ImageIcon className="w-12 h-12 mx-auto text-muted-foreground/50 mb-4" />
-              <h3 className="font-serif text-lg mb-2">No images yet</h3>
+              <h3 className="font-bold text-lg mb-2">No images yet</h3>
               <p className="text-muted-foreground font-body text-sm mb-4">
                 Upload an image to get started
               </p>
